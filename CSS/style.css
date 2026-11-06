@@ -1,6 +1,8 @@
 
 
 :root {
+    color-scheme: light;
+
     --bg: #ffffff;    
     --bg-dark: #1a1a1a;   
     --text: #1a1a1a;
@@ -28,7 +30,9 @@
     --gap-large: 4rem;
     
     --margin-small: 1rem;
+    --margin-medium-small: 1.5rem;
     --margin-medium: 2rem;
+    --margin-medium-large: 2.5rem;
     --margin-large: 4rem;
     --margin-XL: 8rem;
     
@@ -54,7 +58,8 @@ main {
 
 
 h1 {
-    margin: var(--margin-medium) 0;
+  margin: 0;
+    padding: 0 0 var(--margin-medium) 0;
     font-family: var(--font);
     color: var(text);
     font-size: var(--text-size-h1);
@@ -62,7 +67,8 @@ h1 {
 }
 
 h2 {
-    margin: var(--margin-medium) 0 var(--margin-medium) 0;
+  margin: 0;
+    padding: var(--margin-medium-large) 0 var(--margin-small) 0;
     font-family: var(--font);
     color: var(text);
     font-size: var(--text-size-h2);
@@ -70,20 +76,29 @@ h2 {
 }
 
 h3 {
-    margin: var(--margin-medium) 0 var(--margin-small) 0;
+  margin: 0;
+    padding: var(--margin-small) 0 var(--margin-small) 0;
     font-family: var(--font);
     color: var(text);
     font-size: var(--text-size-h3);
     line-height: var(--line-height-header);
 }
 
+
+
 p,
 li {
-    margin: 0 0 var(--margin-small) 0;
+  margin: 0;
+    padding: 0 0 var(--margin-small) 0;
     font-family: var(--font);
     color: var(--body-text);
     font-size: var(--text-size-body);
     line-height: var(--line-height-body);
+}
+
+ul {
+  margin: 0;
+  padding-block: var(--margin-small);
 }
 
 .pdfLink {
@@ -292,6 +307,7 @@ li {
 .imageFull {
   width: 100%;
   height: auto;
+  padding:  var(--margin-small) 0 var(--margin-small) 0;
 }
 
 .imageSmall {
@@ -306,7 +322,9 @@ li {
 }
 
 
-
+.imageGrid {
+  padding: var(--margin-small) 0 var(--margin-small) 0;
+}
 
 
 
@@ -337,6 +355,9 @@ li {
   display: none;
 }
 
+.noPaddingBot {
+  padding-bottom: 0;
+}
 
 /* ==========================================================================
    RESPONSIVE STYLES
@@ -377,6 +398,7 @@ li {
 
 
 
+
 .displaySmall{
   display: none;
 }
@@ -390,11 +412,14 @@ li {
     margin-top: 0;
   }
 
+
 /* ---------- Desktop  ---------- */
 @media (min-width: 601px) {
+  /* so when multiple columns become a single one, they get their padding back*/
   .noMarginTopCol {
     margin-top: 0;
   }
+
 
   .imageSmall {
   width: 50%;
@@ -420,6 +445,12 @@ li {
     margin: 0 var(--margin-small);
   }
 
+    .noPaddingTopCol {
+    padding-top: 0 !important;
+  }
+    .noPaddingBottomCol {
+    padding-bottom: 0 !important;
+  }
 
   
 .project,
@@ -444,6 +475,8 @@ li {
       width: 100%;
       margin: 0 auto;
     }
+
+
 
     .imageGrid img {
   height: 96px;
