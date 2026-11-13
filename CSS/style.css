@@ -1,7 +1,7 @@
 
 
 :root {
-    color-scheme: light;
+    color-scheme: only light;
 
     --bg: #ffffff;    
     --bg-dark: #1a1a1a;   
@@ -38,7 +38,9 @@
     
 }
 
-
+html, body {
+    background-color: var(--bg);
+}
 
 body {
     margin: 0 var(--margin-medium);
