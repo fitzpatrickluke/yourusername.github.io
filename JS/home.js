@@ -26,6 +26,11 @@ const SITE = {
       image: "ASSETS/Home/portfolio2C.png"
     },
     {
+      title: "Stealth AI UX Research Report",
+      link: "stealth-ai-ux.html",
+      image: "ASSETS/Home/portfolioStealthAI.png"
+    },
+    {
       title: "Honolulu Olympics Visual Identity",
       link: "honolulu-olympics-system.html",
       image: "ASSETS/Home/portfolioHonoluluOlympics.png"
@@ -35,6 +40,7 @@ const SITE = {
       link: "hd2d-scene.html",
       image: "ASSETS/Home/portfolioHD.png"
     }
+    
   ]
 };
 
